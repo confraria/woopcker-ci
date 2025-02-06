@@ -5,6 +5,7 @@ when:
 steps:
   - name: build-image
     image: quay.io/podman/stable
+    privileged: true
     commands:
       - podman build --rm -t sample-nginx .
     volumes:
