@@ -8,6 +8,3 @@ steps:
     privileged: true
     commands:
       - podman build --rm -t sample-nginx .
-    volumes:
-      - /var/run/podman.sock:/var/run/podman.sock
-      - /var/lib/containers:/var/lib/containers
