@@ -3,8 +3,11 @@ when:
     branch: main
 
 steps:
-  - name: build-image-change
+  - name: build-image
     image: quay.io/podman/stable
     privileged: true
     commands:
       - podman build --rm -t sample-nginx .
+    volumes:
+      - /var/run/podman.sock:/var/run/podman.sock
+      - /var/lib/containers:/var/lib/containers
