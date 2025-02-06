@@ -3,7 +3,7 @@ when:
     branch: main
 
 steps:
-  - name: build-image
+  - name: build-image-change
     image: quay.io/podman/stable
     privileged: true
     commands:
